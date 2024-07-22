@@ -2,11 +2,12 @@
 /* Your CSS Code here. */
 .holder {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Distributes items with space between them */
+    flex-wrap: wrap; /* Allows items to wrap to the next row */
+    justify-content: space-between; /* Ensures items are evenly spaced, with the first and last items touching the container edges */
 }
 
 .item {
-    flex: 1 1 auto; /* Allows items to grow and shrink as needed */
-    margin: 10px; /* Adds space between items */
+    flex: 0 1 calc(25% - 10px); /* Allows items to grow and shrink while maintaining a basis width and margin */
+    margin-bottom: 10px; /* Adds space between rows */
+    box-sizing: border-box; /* Ensures padding and border are included in the item's total width */
 }

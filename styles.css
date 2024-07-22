@@ -3,11 +3,14 @@
 .holder {
     display: flex;
     flex-wrap: wrap; /* Allows items to wrap to the next row */
-    justify-content: space-between; /* Ensures items are evenly spaced, with the first and last items touching the container edges */
+    justify-content: space-between; /* Ensures items are evenly spaced */
+    gap: 10px; /* Adds space between items */
+    padding: 0 10px; /* Ensures the first and last items touch the container edges */
+    box-sizing: border-box; /* Ensures padding is included in the holder's total width */
 }
 
 .item {
-    flex: 0 1 calc(25% - 10px); /* Allows items to grow and shrink while maintaining a basis width and margin */
-    margin-bottom: 10px; /* Adds space between rows */
+    flex: 1 1 calc(25% - 20px); /* Allows items to grow and shrink as needed, with margin */
     box-sizing: border-box; /* Ensures padding and border are included in the item's total width */
 }
+
